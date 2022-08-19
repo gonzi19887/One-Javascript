@@ -1,4 +1,18 @@
+var btnAdicionar = document.querySelector("#adicionar-paciente");
+
+btnAdicionar.addEventListener("click", function(event)){
+	event.preventDefault();
+	var form.document.querySelector("#form-adicionar");
+
+	var nombre = form.nombre.value;
+	var peso = form.peso.value;
+	var altura = form.altura.value;
+	var gordura = form.gordura.value;
+}
+
+
 var pacientes = document.querySelectorAll(".paciente");
+
 
 for (var i = 0; i < pacientes.length; i++) {
 
