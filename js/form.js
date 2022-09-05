@@ -6,6 +6,11 @@ botonAdicionar.addEventListener("click", function(event) {
 	var form = document.querySelector("#form-adicionar");
 	var paciente = capturarDatosPaciente(form);
 	var pacienteTr = construirTr(paciente);
+	if (validarPaciente(paciente)) {
+
+		return;
+
+	}
 	var tabla = document.querySelector("#tabla-pacientes");
 	tabla.appendChild(pacienteTr);
 	form.reset();
@@ -38,9 +43,18 @@ function construirTr(paciente) {
 	return pacienteTr;
 }
 
-function construirTd(dato,clase){
+function construirTd(dato, clase) {
 	var td = document.createElement("td");
 	td.classList.add(clase);
 	td.textContent = dato;
 	return td;
+}
+
+function validarPaciente(paciente) {
+	if (validarPeso(paciente.peso)) {
+		return true;
+	}
+	else (){
+		return false;
+	}
 }
